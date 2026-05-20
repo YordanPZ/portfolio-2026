@@ -1,0 +1,116 @@
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-meta yp-rise-1">
+      <div class="item">
+        <span class="label">01</span>
+        <span class="val"><span data-lang-es>Full-Stack · 4+ años</span><span data-lang-en>Full-Stack · 4+ yrs</span></span>
+      </div>
+      <div class="item">
+        <span class="label">02</span>
+        <span class="val">Buenos Aires, AR · GMT−3</span>
+      </div>
+      <div class="item">
+        <span class="label">03</span>
+        <span class="val"><span data-lang-es>EN: lectura y escucha fluida</span><span data-lang-en>EN: fluent reading &amp; listening</span></span>
+      </div>
+      <div class="item">
+        <span class="label">04</span>
+        <span class="val"><span data-lang-es>Disponible · 2026</span><span data-lang-en>Available · 2026</span></span>
+      </div>
+    </div>
+
+    <h1 class="hero-name yp-rise-2">Yordan<br/><em>Jiménez.</em></h1>
+
+    <div class="hero-tagline yp-rise-3">
+      <div class="hero-role serif-i">
+        <span data-lang-es>Desarrollador Full-Stack buscando equipo.</span>
+        <span data-lang-en>Full-Stack Developer looking for a team.</span>
+        <span class="pill">Senior IC</span>
+      </div>
+      <p class="hero-statement">
+        <span data-lang-es-block>
+          Cuatro años escribiendo sistemas que tienen que funcionar todos los días — ERPs, helpdesks, microservicios en AWS. <strong>Abierto a roles in-house full-time</strong>, remoto o híbrido en Buenos Aires.
+        </span>
+        <span data-lang-en-block>
+          Four years writing systems that have to work every single day — ERPs, helpdesks, microservices on AWS. <strong>Open to in-house full-time roles</strong>, remote or hybrid in Buenos Aires.
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: clamp(56px, 10vw, 160px) 0 clamp(40px, 7vw, 90px);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px var(--gutter);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+  .hero-meta .item { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+  .hero-meta .item .label { color: var(--color-line-2); min-width: 24px; }
+  .hero-meta .item .val { color: var(--color-ink-2); overflow: hidden; text-overflow: ellipsis; }
+  @media (max-width: 880px) { .hero-meta { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .hero-meta { grid-template-columns: 1fr; } }
+
+  .hero-name {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 0.86;
+    font-size: clamp(72px, 16vw, 268px);
+    margin: 0;
+  }
+  .hero-name em { font-style: italic; color: var(--color-ink-2); }
+
+  .hero-tagline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    margin-top: clamp(36px, 5vw, 60px);
+    align-items: end;
+  }
+  .hero-role {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(26px, 3.2vw, 46px);
+    line-height: 1.06;
+    color: var(--color-ink);
+    max-width: 24ch;
+  }
+  .hero-role .pill {
+    font-style: normal;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    border: 1px solid var(--color-line-2);
+    padding: 4px 10px;
+    border-radius: 99px;
+    margin-left: 8px;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .hero-statement {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--color-muted);
+    max-width: 44ch;
+    justify-self: end;
+    margin: 0;
+  }
+  .hero-statement strong { color: var(--color-ink); font-weight: 500; }
+  @media (max-width: 820px) {
+    .hero-tagline { grid-template-columns: 1fr; }
+    .hero-statement { justify-self: start; }
+  }
+</style>

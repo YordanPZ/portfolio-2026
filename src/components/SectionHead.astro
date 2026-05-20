@@ -1,0 +1,59 @@
+---
+interface Props {
+  num: string;
+  labelEs: string;
+  labelEn: string;
+  titleEs: string;
+  titleEn: string;
+}
+
+const { num, labelEs, labelEn, titleEs, titleEn } = Astro.props;
+---
+<div class="section-head">
+  <div class="section-num">
+    <span class="bar" aria-hidden="true"></span>
+    <span>§ {num} / <span data-lang-es>{labelEs}</span><span data-lang-en>{labelEn}</span></span>
+  </div>
+  <h2 class="section-title">
+    <span data-lang-es>{titleEs}</span>
+    <span data-lang-en>{titleEn}</span>
+  </h2>
+</div>
+
+<style>
+  .section-head {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: var(--gutter);
+    align-items: baseline;
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+  .section-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-num .bar {
+    width: 32px;
+    height: 1px;
+    background: var(--color-ink);
+    display: inline-block;
+  }
+  .section-title {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(40px, 5.4vw, 84px);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    margin: 0;
+    max-width: 16ch;
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>

@@ -1,0 +1,92 @@
+---
+import SectionHead from './SectionHead.astro';
+import { aboutLede, aboutKvs } from '~/data/about';
+---
+<section class="block" id="about">
+  <div class="wrap">
+    <SectionHead
+      num="01"
+      labelEs="Posicionamiento"
+      labelEn="Positioning"
+      titleEs="Cómo trabajo, qué busco."
+      titleEn="How I work, what I look for."
+    />
+
+    <div class="about">
+      <div></div>
+      <div class="lede serif">
+        <span data-lang-es-block set:html={aboutLede.es} />
+        <span data-lang-en-block set:html={aboutLede.en} />
+      </div>
+      <aside class="about-side">
+        {aboutKvs.map((kv) => (
+          <div class="kv">
+            <div class="k"><span data-lang-es>{kv.keyEs}</span><span data-lang-en>{kv.keyEn}</span></div>
+            <div class="v">
+              <span data-lang-es>{kv.valueEs}</span>
+              <span data-lang-en>{kv.valueEn}</span>
+            </div>
+          </div>
+        ))}
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  section.block {
+    padding: clamp(80px, 10vw, 150px) 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 220px 1fr 380px;
+    gap: var(--gutter);
+  }
+  .about .lede {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 2.6vw, 36px);
+    line-height: 1.22;
+    letter-spacing: -0.005em;
+    max-width: min(42ch, 100%);
+  }
+  .about .lede :global(em) { font-style: italic; color: var(--color-ink-2); }
+  .about-side {
+    display: grid;
+    gap: 28px;
+    align-content: start;
+  }
+  .about-side .kv {
+    border-top: 1px solid var(--color-line);
+    padding-top: 14px;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .about-side .kv .k {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 6px;
+  }
+  .about-side .kv .v {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--color-ink-2);
+  }
+  @media (max-width: 1100px) {
+    .about { grid-template-columns: 220px 1fr; }
+    .about-side {
+      grid-column: 2;
+      margin-top: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 720px) {
+    .about { grid-template-columns: 1fr; }
+    .about-side {
+      grid-template-columns: 1fr;
+      grid-column: 1;
+    }
+  }
+</style>

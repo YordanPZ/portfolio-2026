@@ -1,0 +1,33 @@
+<div class="langtoggle" role="group" aria-label="Language">
+  <button type="button" data-set-lang="es" class="active">ES</button>
+  <button type="button" data-set-lang="en">EN</button>
+</div>
+
+<style>
+  .langtoggle {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--color-line-2);
+    border-radius: 99px;
+    padding: 2px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .04em;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .langtoggle button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 99px;
+    color: var(--color-muted);
+    font: inherit;
+    text-transform: uppercase;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  .langtoggle button.active {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+</style>

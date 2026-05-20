@@ -1,0 +1,33 @@
+---
+import SunIcon from './icons/SunIcon.astro';
+import MoonIcon from './icons/MoonIcon.astro';
+---
+<button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
+  <MoonIcon class="moon-icon" />
+  <SunIcon class="sun-icon" />
+</button>
+
+<style>
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-line-2);
+    background: transparent;
+    border-radius: 99px;
+    cursor: pointer;
+    padding: 0;
+    color: var(--color-muted);
+    transition: color .15s, border-color .15s, background .15s;
+  }
+  .icon-btn:hover {
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+  .icon-btn :global(svg) { width: 14px; height: 14px; }
+  .icon-btn :global(.sun-icon) { display: none; }
+  :global(:root[data-theme="dark"]) .icon-btn :global(.sun-icon) { display: block; }
+  :global(:root[data-theme="dark"]) .icon-btn :global(.moon-icon) { display: none; }
+</style>

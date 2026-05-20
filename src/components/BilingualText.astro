@@ -1,0 +1,35 @@
+---
+interface Props {
+  es: string;
+  en: string;
+  block?: boolean;
+  html?: boolean;
+}
+
+const { es, en, block = false, html = false } = Astro.props;
+---
+{block ? (
+  html ? (
+    <>
+      <span data-lang-es-block set:html={es} />
+      <span data-lang-en-block set:html={en} />
+    </>
+  ) : (
+    <>
+      <span data-lang-es-block>{es}</span>
+      <span data-lang-en-block>{en}</span>
+    </>
+  )
+) : (
+  html ? (
+    <>
+      <span data-lang-es set:html={es} />
+      <span data-lang-en set:html={en} />
+    </>
+  ) : (
+    <>
+      <span data-lang-es>{es}</span>
+      <span data-lang-en>{en}</span>
+    </>
+  )
+)}

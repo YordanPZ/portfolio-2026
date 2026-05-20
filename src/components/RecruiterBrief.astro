@@ -1,0 +1,123 @@
+---
+import { brief } from '~/data/brief';
+---
+<section class="brief" id="brief">
+  <div class="wrap">
+    <div class="label-strip">
+      <span class="bar" aria-hidden="true"></span>
+      <span data-lang-es>Brief para reclutadores</span><span data-lang-en>Recruiter brief</span>
+      <span>·</span>
+      <span data-lang-es>Lo esencial en 6 datos</span><span data-lang-en>The essentials in 6 facts</span>
+    </div>
+    <p class="lead serif-i">
+      <span data-lang-es>Si estás buscando un Full-Stack mid-senior con dueñidad real del stack — escaneá esto primero.</span>
+      <span data-lang-en>If you're looking for a mid-senior Full-Stack who actually owns the stack — scan this first.</span>
+    </p>
+
+    <div class="brief-grid">
+      {brief.map((cell) => (
+        <div class="cell">
+          <div class="k"><span data-lang-es>{cell.keyEs}</span><span data-lang-en>{cell.keyEn}</span></div>
+          <div class="v">
+            {cell.withDot && <span class="ok-dot" aria-hidden="true"></span>}
+            <span data-lang-es-block>{cell.valueEs}</span>
+            <span data-lang-en-block>{cell.valueEn}</span>
+            {(cell.smallEs || cell.smallEn) && (
+              <small>
+                <span data-lang-es>{cell.smallEs}</span>
+                <span data-lang-en>{cell.smallEn}</span>
+              </small>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .brief {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    padding: clamp(40px, 6vw, 72px) 0;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  .brief .label-strip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--color-paper) 55%, transparent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .brief .label-strip .bar {
+    width: 32px;
+    height: 1px;
+    background: color-mix(in oklab, var(--color-paper) 55%, transparent);
+    display: inline-block;
+  }
+  .brief .lead {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(28px, 3.6vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.012em;
+    max-width: 26ch;
+    margin: 0 0 clamp(36px, 5vw, 56px);
+  }
+  .brief-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid color-mix(in oklab, var(--color-paper) 18%, transparent);
+    border-left: 1px solid color-mix(in oklab, var(--color-paper) 18%, transparent);
+  }
+  .brief-grid .cell {
+    border-right: 1px solid color-mix(in oklab, var(--color-paper) 18%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--color-paper) 18%, transparent);
+    padding: 22px 24px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .brief-grid .k {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--color-paper) 55%, transparent);
+  }
+  .brief-grid .v {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(22px, 2.2vw, 32px);
+    line-height: 1.08;
+    color: var(--color-paper);
+    letter-spacing: -0.005em;
+  }
+  .brief-grid .v small {
+    display: block;
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-size: 12px;
+    color: color-mix(in oklab, var(--color-paper) 60%, transparent);
+    margin-top: 4px;
+    letter-spacing: 0;
+  }
+  .brief-grid .v .ok-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 99px;
+    background: #6ec07a;
+    box-shadow: 0 0 0 4px color-mix(in oklab, #6ec07a 18%, transparent);
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  @media (max-width: 980px) { .brief-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .brief-grid { grid-template-columns: 1fr; } }
+</style>

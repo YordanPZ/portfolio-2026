@@ -1,0 +1,53 @@
+---
+import '~/styles/global.css';
+import { site } from '~/data/site';
+
+interface Props {
+  title?: string;
+}
+
+const { title = site.title } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={site.descriptionEn} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CV URL config -->
+    <script is:inline define:vars={{ cvUrl: site.cvUrl }}>
+      window.CV_URL = cvUrl;
+    </script>
+
+    <!-- Pre-render theme to avoid flash -->
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('yp-theme');
+          var t = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.dataset.theme = t;
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      import '~/scripts/lang-toggle';
+      import '~/scripts/theme-toggle';
+      import '~/scripts/scroll-reveal';
+      import '~/scripts/cv-link';
+    </script>
+  </body>
+</html>

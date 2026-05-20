@@ -1,0 +1,120 @@
+---
+import SectionHead from './SectionHead.astro';
+import { site } from '~/data/site';
+---
+<section class="block contact-block" id="contact">
+  <div class="wrap">
+    <SectionHead
+      num="05"
+      labelEs="Contacto"
+      labelEn="Contact"
+      titleEs="Empezamos por un email."
+      titleEn="Let's start with an email."
+    />
+
+    <div class="contact-grid">
+      <div></div>
+      <div>
+        <div class="contact-main serif-i">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
+
+        <p class="contact-blurb">
+          <span data-lang-es>Reclutadores, hiring managers, founding engineers — si tu equipo busca un Full-Stack con dueñidad del producto y disciplina de delivery, escribime. Respondo en menos de 24 hs.</span>
+          <span data-lang-en>Recruiters, hiring managers, founding engineers — if your team needs a Full-Stack with product ownership and delivery discipline, write me. I reply within 24 hours.</span>
+        </p>
+
+        <div class="contact-cols">
+          <div class="ckv">
+            <div class="k">Email</div>
+            <div class="v"><a class="link" href={`mailto:${site.email}`}>{site.email}</a></div>
+          </div>
+          <div class="ckv">
+            <div class="k">WhatsApp</div>
+            <div class="v"><a class="link" href={site.whatsappUrl}>{site.whatsappNumber}</a></div>
+          </div>
+          <div class="ckv">
+            <div class="k">LinkedIn</div>
+            <div class="v"><a class="link" href={site.linkedinUrl} target="_blank" rel="noopener">{site.linkedinHandle}</a></div>
+          </div>
+          <div class="ckv">
+            <div class="k">GitHub</div>
+            <div class="v"><a class="link" href={site.githubUrl} target="_blank" rel="noopener">{site.githubHandle}</a></div>
+          </div>
+          <div class="ckv">
+            <div class="k"><span data-lang-es>Ubicación</span><span data-lang-en>Location</span></div>
+            <div class="v">{site.location}</div>
+          </div>
+          <div class="ckv">
+            <div class="k">CV</div>
+            <div class="v"><a class="link" href="#" target="_blank" rel="noopener" data-cv-link>Yordan-Jimenez-CV.pdf</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section.contact-block {
+    padding: clamp(80px, 10vw, 150px) 0;
+    border-bottom: 0;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: var(--gutter);
+  }
+  .contact-main {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(36px, 4.6vw, 70px);
+    line-height: 1.0;
+    letter-spacing: -0.015em;
+    max-width: 14ch;
+  }
+  .contact-main a {
+    display: inline-block;
+    border-bottom: 2px solid var(--color-ink);
+    padding-bottom: 2px;
+    line-height: 1.0;
+  }
+  .contact-blurb {
+    margin: 32px 0 0;
+    max-width: 54ch;
+    color: var(--color-ink-2);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .contact-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px var(--gutter);
+    margin-top: 44px;
+    max-width: 740px;
+  }
+  .contact-cols .ckv {
+    border-top: 1px solid var(--color-line);
+    padding-top: 14px;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .contact-cols .ckv .k {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 8px;
+  }
+  .contact-cols .ckv .v {
+    font-size: 17px;
+    color: var(--color-ink);
+  }
+  .contact-cols .ckv a.link {
+    font-size: 16px;
+  }
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-cols { grid-template-columns: 1fr; }
+  }
+</style>

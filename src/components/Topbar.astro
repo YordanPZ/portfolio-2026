@@ -1,0 +1,107 @@
+---
+import LangToggle from './LangToggle.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import DownloadIcon from './icons/DownloadIcon.astro';
+import { site } from '~/data/site';
+---
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="name">{site.name}</span>
+      <span class="status">
+        <span data-lang-es>Abierto a propuestas</span><span data-lang-en>Open to roles</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#brief" class="nav-link"><span data-lang-es>Brief</span><span data-lang-en>Brief</span></a>
+      <a href="#about" class="nav-link"><span data-lang-es>Acerca</span><span data-lang-en>About</span></a>
+      <a href="#experience" class="nav-link"><span data-lang-es>Experiencia</span><span data-lang-en>Experience</span></a>
+      <a href="#built" class="nav-link"><span data-lang-es>Construido</span><span data-lang-en>Built</span></a>
+      <a href="#stack" class="nav-link">Stack</a>
+      <a href="#contact" class="nav-link"><span data-lang-es>Contacto</span><span data-lang-en>Contact</span></a>
+      <span class="sep nav-link">·</span>
+      <LangToggle />
+      <ThemeToggle />
+      <a href="#" class="nav-cv" target="_blank" rel="noopener" data-cv-link>
+        <DownloadIcon />
+        CV
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in oklab, var(--color-paper) 88%, transparent);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--color-line);
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px var(--gutter);
+    max-width: var(--container-maxw);
+    margin: 0 auto;
+    font-size: 13px;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .brand .dot {
+    width: 8px; height: 8px; border-radius: 99px;
+    background: var(--color-ok);
+    display: inline-block;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-ok) 18%, transparent);
+  }
+  .brand .name {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .brand .status {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding-left: 10px;
+    margin-left: 4px;
+    border-left: 1px solid var(--color-line-2);
+  }
+  .nav { display: flex; align-items: center; gap: 22px; }
+  .nav a { color: var(--color-muted); transition: color .15s; font-size: 13px; }
+  .nav a:hover { color: var(--color-ink); }
+  .nav .sep { color: var(--color-line-2); }
+
+  .nav a.nav-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--color-ink);
+    padding: 6px 12px;
+    border-radius: 99px;
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .nav a.nav-cv:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    border-color: var(--color-ink);
+  }
+  .nav a.nav-cv :global(svg) { width: 11px; height: 11px; }
+
+  @media (max-width: 880px) {
+    .nav .nav-link, .nav .sep, .brand .status { display: none; }
+  }
+</style>

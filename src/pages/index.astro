@@ -1,0 +1,25 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Topbar from '~/components/Topbar.astro';
+import Hero from '~/components/Hero.astro';
+import RecruiterBrief from '~/components/RecruiterBrief.astro';
+import About from '~/components/About.astro';
+import Experience from '~/components/Experience.astro';
+import BuiltWork from '~/components/BuiltWork.astro';
+import Stack from '~/components/Stack.astro';
+import Contact from '~/components/Contact.astro';
+import Footer from '~/components/Footer.astro';
+---
+<BaseLayout>
+  <Topbar />
+  <main id="top">
+    <Hero />
+    <RecruiterBrief />
+    <About />
+    <Experience />
+    <BuiltWork />
+    <Stack />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

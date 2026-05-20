@@ -1,0 +1,95 @@
+---
+import SectionHead from './SectionHead.astro';
+import { stack } from '~/data/stack';
+---
+<section class="block" id="stack">
+  <div class="wrap">
+    <SectionHead
+      num="04"
+      labelEs="Stack"
+      labelEn="Stack"
+      titleEs="Herramientas, no religión."
+      titleEn="Tools, not religion."
+    />
+
+    <div class="stack-grid">
+      {stack.map((cell) => (
+        <div class={`cell ${cell.inverted ? 'inverted' : ''}`}>
+          <div class="cat"><span data-lang-es>{cell.catEs}</span><span data-lang-en>{cell.catEn}</span></div>
+          <div class="items">
+            {cell.items.map((it) => (
+              <span>
+                {it.label}
+                {(it.noteEs || it.noteEn) && (
+                  <span class="sm">
+                    <span data-lang-es>{it.noteEs}</span><span data-lang-en>{it.noteEn}</span>
+                  </span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section.block {
+    padding: clamp(80px, 10vw, 150px) 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--color-line);
+    border-left: 1px solid var(--color-line);
+  }
+  .stack-grid .cell {
+    border-right: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    padding: 24px 22px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .stack-grid .cell.inverted {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .stack-grid .cell.inverted .cat {
+    color: color-mix(in oklab, var(--color-paper) 60%, transparent);
+  }
+  .stack-grid .cell.inverted .items {
+    color: var(--color-paper);
+  }
+  .stack-grid .cat {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .stack-grid .items {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.2;
+    color: var(--color-ink);
+    letter-spacing: -0.005em;
+  }
+  .stack-grid .items > span { display: block; }
+  .stack-grid .items .sm {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--color-muted);
+    margin-top: 4px;
+    text-transform: none;
+  }
+  @media (max-width: 980px) { .stack-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
+</style>

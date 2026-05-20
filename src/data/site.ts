@@ -1,0 +1,16 @@
+export const site = {
+  name: 'Yordan Jiménez',
+  title: 'Yordan Jiménez — Full-Stack Developer · Open to senior roles',
+  descriptionEs: 'Desarrollador Full-Stack con 4+ años de experiencia en producción. Next.js, React, Node, AWS, Postgres, Kubernetes. Buenos Aires, Argentina. Abierto a roles in-house senior.',
+  descriptionEn: 'Full-Stack Developer with 4+ years of production experience. Next.js, React, Node, AWS, Postgres, Kubernetes. Buenos Aires, Argentina. Open to senior in-house roles.',
+  cvUrl: '/assets/Yordan-Jimenez-CV.pdf',
+  email: 'yordanpz@hotmail.com',
+  whatsappNumber: '+54 11 2380 7219',
+  whatsappUrl: 'https://wa.me/541123807219',
+  linkedinUrl: 'https://www.linkedin.com/in/yordan-jimenez/',
+  linkedinHandle: '/in/yordan-jimenez',
+  githubUrl: 'https://github.com/YordanPZ',
+  githubHandle: '@YordanPZ',
+  location: 'Buenos Aires, Argentina',
+  timezone: 'GMT−3',
+};
