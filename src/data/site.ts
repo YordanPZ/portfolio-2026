@@ -3,7 +3,7 @@ export const site = {
   title: 'Yordani Jimenez — Full-Stack Developer · Node.js · TypeScript · React',
   descriptionEs: 'Desarrollador Full-Stack con 4+ años de experiencia en producción. Next.js, React, Node, Kubernetes, AWS, Postgres. Manresa (Barcelona), España. Permiso de trabajo en vigor y disponibilidad inmediata.',
   descriptionEn: 'Full-Stack Developer with 4+ years of production experience. Next.js, React, Node, Kubernetes, AWS, Postgres. Barcelona area, Spain. Valid work permit, immediately available.',
-  cvUrl: '/assets/Yordan-Jimenez-CV.pdf',
+  cvUrl: 'https://drive.google.com/file/d/1rZA5VxlI-NmjZWtA94zu8UhzKsD6vB7S/view',
   email: 'yordanpz@hotmail.com',
   whatsappNumber: '+34 613 59 34 12',
   whatsappUrl: 'https://wa.me/34613593412',

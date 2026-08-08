@@ -22,8 +22,8 @@ export const brief: BriefCell[] = [
     keyEn: 'Work mode',
     valueEs: 'Remoto',
     valueEn: 'Remote',
-    smallEs: 'Híbrido en Barcelona si el proyecto lo justifica',
-    smallEn: 'Hybrid in Barcelona if the project is worth it',
+    smallEs: 'Primera opción remoto; híbrido en Barcelona también me encaja',
+    smallEn: 'Remote first; hybrid in Barcelona works for me too',
   },
   {
     keyEs: 'Ubicación',
