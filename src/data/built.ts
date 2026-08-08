@@ -43,6 +43,16 @@ export const builtItems: BuiltItem[] = [
   },
   {
     idx: 'N.º 05',
+    nameEs: 'Exámenes online a escala — OMATBOL',
+    nameEn: 'Online exams at scale — OMATBOL',
+    ctxEs: 'Producción · omatbol.com',
+    ctxEn: 'Production · omatbol.com',
+    descEs: 'Plataforma completa de la Olimpiada Matemática Boliviana: inscripciones, credenciales QR y exámenes online con corrección automática. Pico real de ~12.000 estudiantes simultáneos en exámenes nacionales. Astro SSR + React en el frontend, Strapi 5 + PostgreSQL detrás.',
+    descEn: 'The full platform behind the Bolivian Math Olympiad: registration, QR credentials and auto-graded online exams. Real peak of ~12,000 concurrent students during national exams. Astro SSR + React on the frontend, Strapi 5 + PostgreSQL behind.',
+    stack: ['Astro SSR', 'React', 'Strapi 5', 'PostgreSQL', 'JWT', 'PostHog'],
+  },
+  {
+    idx: 'N.º 06',
     nameEs: 'Plataforma de salud · web + móvil',
     nameEn: 'Health platform · web + mobile',
     ctxEs: 'Backoffice · React Native',
@@ -52,7 +62,7 @@ export const builtItems: BuiltItem[] = [
     stack: ['React Native', 'Next.js', 'Postgres', 'Prisma', 'Role-based auth'],
   },
   {
-    idx: 'N.º 06',
+    idx: 'N.º 07',
     nameEs: 'Transformación ágil',
     nameEn: 'Agile transformation',
     ctxEs: 'Scrum · OKRs · Coaching',

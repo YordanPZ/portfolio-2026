@@ -13,28 +13,28 @@ export const timeline: TimelineEntry[] = [
     whereEn: 'Consultancy · Tigo account',
     bullets: [
       {
-        es: 'Asignado a Tigo (telco multinacional). Desarrollo y mantenimiento de varios microservicios en producción.',
-        en: 'Assigned to Tigo (multinational telco). Building and maintaining multiple production microservices.',
+        es: 'Migración de la billetera Tigo Money (Millicom) al portal Mi Tigo: ~15 microservicios de pagos en Node.js sobre Kubernetes, procesando dinero real en producción.',
+        en: 'Migrating the Tigo Money wallet (Millicom) into the Mi Tigo portal: ~15 Node.js payment microservices on Kubernetes, processing real money in production.',
       },
       {
-        es: 'Web components con StencilJS — pensados para vivir en múltiples productos de la empresa.',
-        en: 'StencilJS web components — designed to live across multiple company products.',
+        es: 'Frontend y backend de cada funcionalidad: web component en StencilJS embebido en el portal + su microservicio correspondiente.',
+        en: 'Frontend and backend of every feature: a StencilJS web component embedded in the portal + its matching microservice.',
       },
       {
-        es: 'CI/CD con Jenkins · despliegues sobre Kubernetes · cultura enterprise.',
-        en: 'CI/CD with Jenkins · Kubernetes deployments · enterprise culture.',
+        es: 'Cifrado JWE extremo a extremo, API gateway KrakenD, CI/CD con Jenkins + GitLab, E2E con Playwright y pentest externo antes de cada release.',
+        en: 'End-to-end JWE encryption, KrakenD API gateway, Jenkins + GitLab CI/CD, Playwright E2E and external pentesting before every release.',
       },
     ],
   },
   {
     yearRange: '2023 — hoy',
-    durationEs: '3 años 5 meses',
-    durationEn: '3 yrs 5 mos',
+    durationEs: '3 años 7 meses',
+    durationEn: '3 yrs 7 mos',
     roleEs: 'Full-Stack Developer',
     roleEn: 'Full-Stack Developer',
     company: 'Code Control',
-    whereEs: 'Argentina',
-    whereEn: 'Argentina',
+    whereEs: 'Oil & Gas · remoto',
+    whereEn: 'Oil & Gas · remote',
     bullets: [
       {
         es: 'Construcción de plataformas multi-tenant en Next.js (App Router) usadas a diario por equipos de operaciones.',
@@ -51,6 +51,30 @@ export const timeline: TimelineEntry[] = [
       {
         es: 'Planificación de sprint y refinement junto al PO.',
         en: 'Sprint planning and refinement with the PO.',
+      },
+    ],
+  },
+  {
+    yearRange: '2025 — 2026',
+    durationEs: '11 meses',
+    durationEn: '11 mos',
+    roleEs: 'Full-Stack Developer (freelance)',
+    roleEn: 'Full-Stack Developer (freelance)',
+    company: 'OMATBOL',
+    whereEs: 'Olimpiada Matemática Boliviana',
+    whereEn: 'Bolivian Math Olympiad',
+    bullets: [
+      {
+        es: 'Plataforma de inscripciones y exámenes online que soportó ~12.000 estudiantes simultáneos en exámenes nacionales (omatbol.com).',
+        en: 'Registration and online exam platform that handled ~12,000 concurrent students during national exams (omatbol.com).',
+      },
+      {
+        es: 'Astro SSR + React en el frontend · Strapi 5 + PostgreSQL detrás · JWT y credenciales QR.',
+        en: 'Astro SSR + React on the frontend · Strapi 5 + PostgreSQL behind · JWT and QR credentials.',
+      },
+      {
+        es: 'Generación de PDFs, migración de datos y analítica con PostHog.',
+        en: 'PDF generation, data migration and PostHog analytics.',
       },
     ],
   },
@@ -89,8 +113,8 @@ export const timeline: TimelineEntry[] = [
     roleEs: 'Scrum Master',
     roleEn: 'Scrum Master',
     company: 'Proguide Global Services',
-    whereEs: 'Argentina',
-    whereEn: 'Argentina',
+    whereEs: 'Cliente: Banco Galicia',
+    whereEn: 'Client: Banco Galicia',
     bullets: [
       {
         es: 'Facilitación de ceremonias y escalado de Scrum entre equipos.',
@@ -110,15 +134,15 @@ export const timeline: TimelineEntry[] = [
 
 export const education: EducationEntry[] = [
   {
-    yearRange: '2015 — 2020',
-    titleEs: 'Técnico en programación',
-    titleEn: 'Programming, Technical degree',
+    yearRange: '2014 — 2020',
+    titleEs: 'Técnico · Maestro Mayor de Obras',
+    titleEn: 'Technical degree',
     institution: 'Escuela Técnica Otto Krause',
   },
   {
     yearRange: '2022',
-    titleEs: 'Scrum Master · Agile Coach',
-    titleEn: 'Scrum Master · Agile Coach',
-    institution: 'UTN FRBA',
+    titleEs: 'Certified Scrum Master (CSM)',
+    titleEn: 'Certified Scrum Master (CSM)',
+    institution: 'Scrum Alliance · UTN FRBA',
   },
 ];
