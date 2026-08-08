@@ -44,6 +44,30 @@ const { title = site.title } = Astro.props;
   <body>
     <slot />
 
+    <!-- Aviso de visita (analítica propia). ?me=1 marca este navegador como tuyo y deja de notificar. -->
+    <script is:inline>
+      (function () {
+        try {
+          var p = new URLSearchParams(location.search);
+          if (p.get('me') === '1') localStorage.setItem('yp-owner', '1');
+          if (sessionStorage.getItem('yp-hit') === '1') return;
+          sessionStorage.setItem('yp-hit', '1');
+          var owner = localStorage.getItem('yp-owner') === '1';
+          fetch('/api/hit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              page: location.pathname,
+              ref: document.referrer || 'directo',
+              lang: navigator.language || '',
+              owner: owner,
+            }),
+            keepalive: true,
+          }).catch(function () {});
+        } catch (e) {}
+      })();
+    </script>
+
     <script>
       import '~/scripts/lang-toggle';
       import '~/scripts/theme-toggle';
