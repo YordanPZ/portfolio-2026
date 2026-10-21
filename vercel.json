@@ -1,0 +1,6 @@
+{
+  "headers": [
+    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] },
+    { "source": "/Jordani-Jimenez-CV.pdf", "headers": [{ "key": "Content-Disposition", "value": "inline; filename=\"Jordani-Jimenez-CV.pdf\"" }] }
+  ]
+}

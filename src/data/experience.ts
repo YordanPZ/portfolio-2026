@@ -2,10 +2,9 @@ import type { TimelineEntry, EducationEntry } from '~/types';
 
 export const timeline: TimelineEntry[] = [
   {
-    yearRange: '2026 — hoy',
-    durationEs: 'Actualmente',
-    durationEn: 'Current',
-    isCurrent: true,
+    yearRange: '2026',
+    durationEs: 'mar. – sep. · 7 meses',
+    durationEn: 'Mar – Sep · 7 mos',
     roleEs: 'Full-Stack Developer',
     roleEn: 'Full-Stack Developer',
     company: 'Boring Soft',
@@ -13,12 +12,16 @@ export const timeline: TimelineEntry[] = [
     whereEn: 'Consultancy · Tigo account',
     bullets: [
       {
-        es: 'Migración de la billetera Tigo Money (Millicom) al portal Mi Tigo: ~15 microservicios de pagos en Node.js sobre Kubernetes, procesando dinero real en producción.',
-        en: 'Migrating the Tigo Money wallet (Millicom) into the Mi Tigo portal: ~15 Node.js payment microservices on Kubernetes, processing real money in production.',
+        es: 'Migración de la billetera Tigo Money (Millicom) al portal Mi Tigo: ~15 microservicios de pagos en Node.js sobre Kubernetes, procesando dinero real de una billetera que usan a diario millones de personas en Bolivia.',
+        en: 'Migrated the Tigo Money wallet (Millicom) into the Mi Tigo portal: ~15 Node.js payment microservices on Kubernetes, processing real money for a wallet used daily by millions of people in Bolivia.',
       },
       {
         es: 'Frontend y backend de cada funcionalidad: web component en StencilJS embebido en el portal + su microservicio correspondiente.',
         en: 'Frontend and backend of every feature: a StencilJS web component embedded in the portal + its matching microservice.',
+      },
+      {
+        es: 'Pago de facturas y servicios, recargas, pagos QR y gestión de PIN; cada microservicio con su documentación de seguridad y las correcciones del informe de ciberseguridad antes de cada release.',
+        en: 'Bill and utility payments, top-ups, QR payments and PIN management; every microservice shipped with its security documentation and fixes from the cybersecurity report before each release.',
       },
       {
         es: 'Cifrado JWE extremo a extremo, API gateway KrakenD, CI/CD con Jenkins + GitLab, E2E con Playwright y pentest externo antes de cada release.',
@@ -28,8 +31,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2023 — hoy',
-    durationEs: '3 años 7 meses',
-    durationEn: '3 yrs 7 mos',
+    durationEs: 'Freelance · en curso',
+    durationEn: 'Freelance · ongoing',
     roleEs: 'Full-Stack Developer',
     roleEn: 'Full-Stack Developer',
     company: 'Code Control',
@@ -56,8 +59,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2025 — 2026',
-    durationEs: '11 meses',
-    durationEn: '11 mos',
+    durationEs: '1 año',
+    durationEn: '1 yr',
     roleEs: 'Full-Stack Developer (freelance)',
     roleEn: 'Full-Stack Developer (freelance)',
     company: 'OMATBOL',
@@ -97,8 +100,12 @@ export const timeline: TimelineEntry[] = [
         en: 'Inter-service events via SQS · Authorizer-based auth.',
       },
       {
-        es: 'Frontends en React y Next.js, integraciones con WhatsApp Business API.',
-        en: 'React and Next.js frontends, WhatsApp Business API integrations.',
+        es: 'Frontends en React y Next.js (kiosco digital, pedidos a cocina), integraciones con WhatsApp Business API y pasarelas de pago.',
+        en: 'React and Next.js frontends (digital kiosk, kitchen orders), WhatsApp Business API and payment gateway integrations.',
+      },
+      {
+        es: 'Optimización de las consultas SQL de estadísticas más pesadas del producto.',
+        en: 'Optimized the heaviest SQL statistics queries in the product.',
       },
       {
         es: 'Persistencia mixta SQL/NoSQL según el caso de uso.',
@@ -135,8 +142,8 @@ export const timeline: TimelineEntry[] = [
 export const education: EducationEntry[] = [
   {
     yearRange: '2014 — 2020',
-    titleEs: 'Técnico · Maestro Mayor de Obras',
-    titleEn: 'Technical degree',
+    titleEs: 'Educación secundaria técnica (completa)',
+    titleEn: 'Technical secondary school (completed)',
     institution: 'Escuela Técnica Otto Krause',
   },
   {

@@ -23,7 +23,7 @@ import { site } from '~/data/site';
       <span class="sep nav-link">·</span>
       <LangToggle />
       <ThemeToggle />
-      <a href="#" class="nav-cv" target="_blank" rel="noopener" data-cv-link>
+      <a href={site.cvUrl} class="nav-cv" download={site.cvFileName}>
         <DownloadIcon />
         CV
       </a>
