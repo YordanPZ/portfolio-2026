@@ -1,6 +1,7 @@
 ---
 import '~/styles/global.css';
 import { site } from '~/data/site';
+import { personJsonLd } from '~/data/structured';
 
 interface Props {
   title?: string;
@@ -15,18 +16,41 @@ const { title = site.title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <meta name="description" content={site.descriptionEn} />
+    <meta name="description" content={site.descriptionEs} />
+    <meta name="author" content={site.name} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={`${site.url}/`} />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Perfil en texto plano" />
+    <link rel="alternate" type="application/pdf" href={site.cvUrl} title="CV en PDF" />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Vista previa al compartir (LinkedIn, WhatsApp, Slack, X) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={site.descriptionEs} />
+    <meta property="og:url" content={`${site.url}/`} />
+    <meta property="og:image" content={`${site.url}/og.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${site.name}, ${site.jobTitle}. ${site.location}.`} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="profile:first_name" content={site.givenName} />
+    <meta property="profile:last_name" content={site.familyName} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={site.descriptionEn} />
+    <meta name="twitter:image" content={`${site.url}/og.png`} />
+
+    <!-- Datos estructurados (schema.org) para buscadores y lectores automáticos -->
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
-    <!-- CV URL config -->
-    <script is:inline define:vars={{ cvUrl: site.cvUrl }}>
-      window.CV_URL = cvUrl;
-    </script>
 
     <!-- Pre-render theme to avoid flash -->
     <script is:inline>
@@ -72,7 +96,6 @@ const { title = site.title } = Astro.props;
       import '~/scripts/lang-toggle';
       import '~/scripts/theme-toggle';
       import '~/scripts/scroll-reveal';
-      import '~/scripts/cv-link';
     </script>
   </body>
 </html>

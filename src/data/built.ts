@@ -27,8 +27,8 @@ export const builtItems: BuiltItem[] = [
     nameEn: 'Enterprise-scale microservices & web components',
     ctxEs: 'Boring Soft · cliente Tigo',
     ctxEn: 'Boring Soft · Tigo account',
-    descEs: 'Trabajo actual en un cliente multinacional de telecomunicaciones. Desarrollo y mantenimiento de varios microservicios productivos, con componentes en StencilJS pensados para reutilizarse entre productos. Pipeline en Jenkins, despliegues sobre Kubernetes, foco en estabilidad y observabilidad.',
-    descEn: 'Current work at a multinational telco client. Building and maintaining several production microservices, plus StencilJS components meant to be reused across products. Jenkins pipeline, Kubernetes deployments, focus on stability and observability.',
+    descEs: 'Proyecto para un cliente multinacional de telecomunicaciones (mar.–sep. 2026). Desarrollo de varios microservicios productivos, con componentes en StencilJS pensados para reutilizarse entre productos. Pipeline en Jenkins, despliegues sobre Kubernetes, foco en estabilidad y observabilidad.',
+    descEn: 'Project for a multinational telco client (Mar–Sep 2026). Built several production microservices, plus StencilJS components meant to be reused across products. Jenkins pipeline, Kubernetes deployments, focus on stability and observability.',
     stack: ['StencilJS', 'Web Components', 'Jenkins', 'Kubernetes', 'Docker', 'CI/CD'],
   },
   {

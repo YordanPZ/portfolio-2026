@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://yordanpz.dev',
+  site: 'https://yordanpz.vercel.app',
   vite: {
     plugins: [tailwindcss()],
   },

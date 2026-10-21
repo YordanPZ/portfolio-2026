@@ -113,9 +113,9 @@ export const stack: StackCell[] = [
     catEn: 'Looking for',
     inverted: true,
     items: [
-      { label: 'Full-time in-house' },
-      { label: 'Remoto o BA' },
-      { label: 'Equipos producto' },
+      { label: 'Teletrabajo 100%', noteEs: 'desde España', noteEn: 'from Spain' },
+      { label: 'Full-time' },
+      { label: 'Equipos de producto' },
     ],
   },
 ];

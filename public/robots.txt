@@ -1,0 +1,5 @@
+# Perfil profesional público: cualquier buscador, reclutador o agente puede leerlo.
+User-agent: *
+Allow: /
+
+Sitemap: https://yordanpz.vercel.app/sitemap.xml
