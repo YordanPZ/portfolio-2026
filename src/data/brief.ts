@@ -4,10 +4,10 @@ export const brief: BriefCell[] = [
   {
     keyEs: 'Experiencia',
     keyEn: 'Experience',
-    valueEs: '4+ años',
-    valueEn: '4+ years',
-    smallEs: 'Producción · equipos 3–15',
-    smallEn: 'Production · teams 3–15',
+    valueEs: '~4 años',
+    valueEn: '~4 years',
+    smallEs: 'Desarrollo en producción desde 2023 · equipos 3–15',
+    smallEn: 'Production development since 2023 · teams 3–15',
   },
   {
     keyEs: 'Último rol',

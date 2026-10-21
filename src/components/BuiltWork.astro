@@ -13,8 +13,8 @@ import { builtItems } from '~/data/built';
     />
 
     <p class="built-note mono">
-      <span data-lang-es>Casi todo lo que envío vive en orgs privadas. Aquí va por tipo de sistema — sin nombres de cliente, con la sustancia técnica intacta.</span>
-      <span data-lang-en>Almost everything I ship lives in private orgs. Here it goes by type of system — no client names, technical substance intact.</span>
+      <span data-lang-es lang="es">Casi todo lo que envío vive en orgs privadas. Aquí va por tipo de sistema — sin nombres de cliente, con la sustancia técnica intacta.</span>
+      <span data-lang-en lang="en">Almost everything I ship lives in private orgs. Here it goes by type of system — no client names, technical substance intact.</span>
     </p>
 
     <div class="built-list">
@@ -22,14 +22,14 @@ import { builtItems } from '~/data/built';
         <article class="built-row">
           <div class="built-idx">{item.idx}</div>
           <div class="built-name serif-i">
-            <span data-lang-es>{item.nameEs}</span><span data-lang-en>{item.nameEn}</span>
+            <span data-lang-es lang="es">{item.nameEs}</span><span data-lang-en lang="en">{item.nameEn}</span>
             <span class="ctx">
-              <span data-lang-es>{item.ctxEs}</span><span data-lang-en>{item.ctxEn}</span>
+              <span data-lang-es lang="es">{item.ctxEs}</span><span data-lang-en lang="en">{item.ctxEn}</span>
             </span>
           </div>
           <div class="built-desc">
-            <span data-lang-es-block>{item.descEs}</span>
-            <span data-lang-en-block>{item.descEn}</span>
+            <span data-lang-es-block lang="es">{item.descEs}</span>
+            <span data-lang-en-block lang="en">{item.descEn}</span>
           </div>
           <div class="built-stack">
             {item.stack.map((s) => <span>{s}</span>)}

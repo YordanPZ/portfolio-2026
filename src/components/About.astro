@@ -15,16 +15,16 @@ import { aboutLede, aboutKvs } from '~/data/about';
     <div class="about">
       <div></div>
       <div class="lede serif">
-        <span data-lang-es-block set:html={aboutLede.es} />
-        <span data-lang-en-block set:html={aboutLede.en} />
+        <span data-lang-es-block lang="es" set:html={aboutLede.es} />
+        <span data-lang-en-block lang="en" set:html={aboutLede.en} />
       </div>
       <aside class="about-side">
         {aboutKvs.map((kv) => (
           <div class="kv">
-            <div class="k"><span data-lang-es>{kv.keyEs}</span><span data-lang-en>{kv.keyEn}</span></div>
+            <div class="k"><span data-lang-es lang="es">{kv.keyEs}</span><span data-lang-en lang="en">{kv.keyEn}</span></div>
             <div class="v">
-              <span data-lang-es>{kv.valueEs}</span>
-              <span data-lang-en>{kv.valueEn}</span>
+              <span data-lang-es lang="es">{kv.valueEs}</span>
+              <span data-lang-en lang="en">{kv.valueEn}</span>
             </div>
           </div>
         ))}

@@ -20,8 +20,8 @@ import { site } from '~/data/site';
         </div>
 
         <p class="contact-blurb">
-          <span data-lang-es>Reclutadores, hiring managers, founding engineers — si tu equipo busca un Full-Stack que se haga cargo del producto y entregue con disciplina, escríbeme. Respondo en menos de 24 h.</span>
-          <span data-lang-en>Recruiters, hiring managers, founding engineers — if your team needs a Full-Stack with product ownership and delivery discipline, write me. I reply within 24 hours.</span>
+          <span data-lang-es lang="es">Reclutadores, hiring managers, founding engineers — si tu equipo busca un Full-Stack que se haga cargo del producto y entregue con disciplina, escríbeme. Respondo en menos de 24 h.</span>
+          <span data-lang-en lang="en">Recruiters, hiring managers, founding engineers — if your team needs a Full-Stack with product ownership and delivery discipline, write me. I reply within 24 hours.</span>
         </p>
 
         <div class="contact-cols">
@@ -30,8 +30,8 @@ import { site } from '~/data/site';
             <div class="v"><a class="link" href={`mailto:${site.email}`}>{site.email}</a></div>
           </div>
           <div class="ckv">
-            <div class="k">WhatsApp</div>
-            <div class="v"><a class="link" href={site.whatsappUrl}>{site.whatsappNumber}</a></div>
+            <div class="k"><span data-lang-es lang="es">Teléfono / WhatsApp</span><span data-lang-en lang="en">Phone / WhatsApp</span></div>
+            <div class="v"><a class="link" href={`tel:${site.whatsappNumber.replace(/\s+/g, "")}`}>{site.whatsappNumber}</a> · <a class="link" href={site.whatsappUrl}>WhatsApp</a></div>
           </div>
           <div class="ckv">
             <div class="k">LinkedIn</div>
@@ -42,7 +42,7 @@ import { site } from '~/data/site';
             <div class="v"><a class="link" href={site.githubUrl} target="_blank" rel="noopener">{site.githubHandle}</a></div>
           </div>
           <div class="ckv">
-            <div class="k"><span data-lang-es>Ubicación</span><span data-lang-en>Location</span></div>
+            <div class="k"><span data-lang-es lang="es">Ubicación</span><span data-lang-en lang="en">Location</span></div>
             <div class="v">{site.location}</div>
           </div>
           <div class="ckv">

@@ -5,27 +5,27 @@ import { brief } from '~/data/brief';
   <div class="wrap">
     <div class="label-strip">
       <span class="bar" aria-hidden="true"></span>
-      <span data-lang-es>Brief para reclutadores</span><span data-lang-en>Recruiter brief</span>
+      <span data-lang-es lang="es">Brief para reclutadores</span><span data-lang-en lang="en">Recruiter brief</span>
       <span>·</span>
-      <span data-lang-es>Lo esencial en 6 datos</span><span data-lang-en>The essentials in 6 facts</span>
+      <span data-lang-es lang="es">Lo esencial en 6 datos</span><span data-lang-en lang="en">The essentials in 6 facts</span>
     </div>
     <p class="lead serif-i">
-      <span data-lang-es>¿Buscas un full-stack que se haga cargo? Empieza por aquí.</span>
-      <span data-lang-en>Looking for a full-stack who takes ownership? Start here.</span>
+      <span data-lang-es lang="es">¿Buscas un full-stack que se haga cargo? Empieza por aquí.</span>
+      <span data-lang-en lang="en">Looking for a full-stack who takes ownership? Start here.</span>
     </p>
 
     <div class="brief-grid">
       {brief.map((cell) => (
         <div class="cell">
-          <div class="k"><span data-lang-es>{cell.keyEs}</span><span data-lang-en>{cell.keyEn}</span></div>
+          <div class="k"><span data-lang-es lang="es">{cell.keyEs}</span><span data-lang-en lang="en">{cell.keyEn}</span></div>
           <div class="v">
             {cell.withDot && <span class="ok-dot" aria-hidden="true"></span>}
-            <span data-lang-es-block>{cell.valueEs}</span>
-            <span data-lang-en-block>{cell.valueEn}</span>
+            <span data-lang-es-block lang="es">{cell.valueEs}</span>
+            <span data-lang-en-block lang="en">{cell.valueEn}</span>
             {(cell.smallEs || cell.smallEn) && (
               <small>
-                <span data-lang-es>{cell.smallEs}</span>
-                <span data-lang-en>{cell.smallEn}</span>
+                <span data-lang-es lang="es">{cell.smallEs}</span>
+                <span data-lang-en lang="en">{cell.smallEn}</span>
               </small>
             )}
           </div>

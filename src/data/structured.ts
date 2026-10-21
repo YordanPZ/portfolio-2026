@@ -24,7 +24,7 @@ export const personJsonLd = {
     name: site.name,
     givenName: site.givenName,
     familyName: site.familyName,
-    alternateName: ['Yordani Jimenez', 'Yordan Jimenez', 'YordanPZ'],
+    alternateName: [site.shortName, 'Jose Yordani Jimenez Vasquez', 'Yordani Jimenez', 'Yordan Jimenez', 'YordanPZ'],
     jobTitle: site.jobTitle,
     description: site.descriptionEs,
     email: `mailto:${site.email}`,
