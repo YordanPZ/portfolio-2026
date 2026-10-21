@@ -77,7 +77,6 @@ export const stack: StackCell[] = [
       { label: 'MCP servers', noteEs: 'servidor propio · CLI', noteEn: 'custom server · CLI' },
       { label: 'WhatsApp Business API' },
       { label: 'Resend · Nodemailer' },
-      { label: 'Conekta (payments)' },
     ],
   },
   {
