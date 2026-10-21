@@ -20,25 +20,25 @@ import { timeline, education } from '~/data/experience';
               {entry.yearRange.includes('hoy') ? (
                 <>
                   {entry.yearRange.replace('hoy', '')}
-                  <span data-lang-es>hoy</span><span data-lang-en>now</span>
+                  <span data-lang-es lang="es">hoy</span><span data-lang-en lang="en">now</span>
                 </>
               ) : (
                 entry.yearRange
               )}
             </span>
             {entry.isCurrent ? (
-              <span class="now"><span data-lang-es>Actualmente</span><span data-lang-en>Current</span></span>
+              <span class="now"><span data-lang-es lang="es">Actualmente</span><span data-lang-en lang="en">Current</span></span>
             ) : (
-              <span><span data-lang-es>{entry.durationEs}</span><span data-lang-en>{entry.durationEn}</span></span>
+              <span><span data-lang-es lang="es">{entry.durationEs}</span><span data-lang-en lang="en">{entry.durationEn}</span></span>
             )}
           </div>
           <div class="tl-role serif-i">
-            <span data-lang-es>{entry.roleEs}</span><span data-lang-en>{entry.roleEn}</span>
+            <span data-lang-es lang="es">{entry.roleEs}</span><span data-lang-en lang="en">{entry.roleEn}</span>
             <span class="at">
               {entry.company}
               {(entry.whereEs || entry.whereEn) && (
                 <span class="where">
-                  <span data-lang-es>{entry.whereEs}</span><span data-lang-en>{entry.whereEn}</span>
+                  <span data-lang-es lang="es">{entry.whereEs}</span><span data-lang-en lang="en">{entry.whereEn}</span>
                 </span>
               )}
             </span>
@@ -58,14 +58,14 @@ import { timeline, education } from '~/data/experience';
     <div class="education">
       <div class="section-num">
         <span class="bar" aria-hidden="true"></span>
-        <span><span data-lang-es>Formación</span><span data-lang-en>Education</span></span>
+        <span><span data-lang-es lang="es">Formación</span><span data-lang-en lang="en">Education</span></span>
       </div>
       <div class="education-grid">
         {education.map((edu) => (
           <div>
             <div class="edu-year">{edu.yearRange}</div>
             <div class="edu-title serif-i">
-              <span data-lang-es>{edu.titleEs}</span><span data-lang-en>{edu.titleEn}</span>
+              <span data-lang-es lang="es">{edu.titleEs}</span><span data-lang-en lang="en">{edu.titleEn}</span>
             </div>
             <div class="edu-inst">{edu.institution}</div>
           </div>

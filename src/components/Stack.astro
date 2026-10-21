@@ -15,14 +15,14 @@ import { stack } from '~/data/stack';
     <div class="stack-grid">
       {stack.map((cell) => (
         <div class={`cell ${cell.inverted ? 'inverted' : ''}`}>
-          <div class="cat"><span data-lang-es>{cell.catEs}</span><span data-lang-en>{cell.catEn}</span></div>
+          <div class="cat"><span data-lang-es lang="es">{cell.catEs}</span><span data-lang-en lang="en">{cell.catEn}</span></div>
           <div class="items">
             {cell.items.map((it) => (
               <span>
                 {it.label}
                 {(it.noteEs || it.noteEn) && (
                   <span class="sm">
-                    <span data-lang-es>{it.noteEs}</span><span data-lang-en>{it.noteEn}</span>
+                    <span data-lang-es lang="es">{it.noteEs}</span><span data-lang-en lang="en">{it.noteEn}</span>
                   </span>
                 )}
               </span>

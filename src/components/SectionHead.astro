@@ -12,11 +12,11 @@ const { num, labelEs, labelEn, titleEs, titleEn } = Astro.props;
 <div class="section-head">
   <div class="section-num">
     <span class="bar" aria-hidden="true"></span>
-    <span>§ {num} / <span data-lang-es>{labelEs}</span><span data-lang-en>{labelEn}</span></span>
+    <span>§ {num} / <span data-lang-es lang="es">{labelEs}</span><span data-lang-en lang="en">{labelEn}</span></span>
   </div>
   <h2 class="section-title">
-    <span data-lang-es>{titleEs}</span>
-    <span data-lang-en>{titleEn}</span>
+    <span data-lang-es lang="es">{titleEs}</span>
+    <span data-lang-en lang="en">{titleEn}</span>
   </h2>
 </div>
 

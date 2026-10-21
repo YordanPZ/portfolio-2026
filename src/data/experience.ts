@@ -31,8 +31,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2023 — hoy',
-    durationEs: 'Freelance · en curso',
-    durationEn: 'Freelance · ongoing',
+    durationEs: 'ene. 2023 – hoy · freelance',
+    durationEn: 'Jan 2023 – now · freelance',
     roleEs: 'Full-Stack Developer',
     roleEn: 'Full-Stack Developer',
     company: 'Code Control',
@@ -59,8 +59,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2025 — 2026',
-    durationEs: '1 año',
-    durationEn: '1 yr',
+    durationEs: 'jun. 2025 – may. 2026 · 1 año',
+    durationEn: 'Jun 2025 – May 2026 · 1 yr',
     roleEs: 'Full-Stack Developer (freelance)',
     roleEn: 'Full-Stack Developer (freelance)',
     company: 'OMATBOL',
@@ -83,8 +83,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2024 — 2025',
-    durationEs: '1 año',
-    durationEn: '1 yr',
+    durationEs: 'jun. 2024 – may. 2025 · 1 año',
+    durationEn: 'Jun 2024 – May 2025 · 1 yr',
     roleEs: 'Full-Stack Developer',
     roleEn: 'Full-Stack Developer',
     company: 'Bairu.io',
@@ -115,8 +115,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     yearRange: '2021 — 2022',
-    durationEs: '1 año 3 meses',
-    durationEn: '1 yr 3 mos',
+    durationEs: 'jun. 2021 – ago. 2022 · 1 año 3 meses',
+    durationEn: 'Jun 2021 – Aug 2022 · 1 yr 3 mos',
     roleEs: 'Scrum Master',
     roleEn: 'Scrum Master',
     company: 'Proguide Global Services',
