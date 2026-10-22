@@ -103,8 +103,6 @@ export const stack: StackCell[] = [
     items: [
       { label: 'Scrum Master' },
       { label: 'Agile Coach', noteEs: 'UTN FRBA', noteEn: 'UTN FRBA' },
-      { label: 'Front-End con React' },
-      { label: 'Agile Kanban' },
     ],
   },
   {
