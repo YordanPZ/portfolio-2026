@@ -1,5 +1,6 @@
 ---
 import '~/styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 import { site } from '~/data/site';
 import { personJsonLd } from '~/data/structured';
 
@@ -51,6 +52,8 @@ const { title = site.title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <Analytics />
 
     <!-- Pre-render theme to avoid flash -->
     <script is:inline>

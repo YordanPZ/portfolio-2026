@@ -12,8 +12,9 @@
     "check": "astro check"
   },
   "dependencies": {
-    "astro": "^5.14.1",
     "@tailwindcss/vite": "^4.1.13",
+    "@vercel/analytics": "^2.0.1",
+    "astro": "^5.14.1",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
